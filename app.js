@@ -46,7 +46,8 @@ app.use('/issuesApi',Issues)
 app.use('/EmailImgs', express.static(path.join(__dirname, '/EmailImgs')));
 
 mongoose.connect(DB_CONNECTION_URL, {
-    useUnifiedTopology: true,
+    useNewUrlParser: true ,
+    // useUnifiedTopology: true,
 
 }).then((result) => {
     console.log("MongoDB connected")
